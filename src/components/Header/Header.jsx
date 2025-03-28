@@ -8,9 +8,18 @@ export default function Header() {
         <div className="flex flex-wrap justify-between items-center mx-auto max-w-screen-xl">
           <Link to="/" className="flex items-center">
             <img
-              src="https://alexharkness.com/wp-content/uploads/2020/06/logo-2.png"
+              src="https://assets.cdn.filesafe.space/tQPUc30JRr6uDkpnT9UJ/media/630df3964fde62f86a72d62d.jpeg"
               className="mr-3 h-12"
               alt="Logo"
+              height={80}
+              width={80}
+            />
+            <img
+              src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ8f9v5PlHMOwlNi6Ewl6Z1sw4mAyaIYtdrl9Z4c03lmWkU9zkDtel4DrDowmu00MMkXaU&usqp=CAU"
+              className="mr-3 h-12"
+              alt="Logo"
+              height={50}
+              width={50}
             />
           </Link>
           <div className="flex items-center lg:order-2">
@@ -87,4 +96,3 @@ export default function Header() {
     </header>
   );
 }
- 
