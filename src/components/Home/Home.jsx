@@ -46,18 +46,104 @@ export default function Home() {
             alt="image1"
           />
         </div>
-        <div className="grid  place-items-center sm:mt-20 ">
-          <img
-            className="h-110  w-160"
-            src="https://img.freepik.com/premium-vector/bodybuilder-silhouette-vector-bodybuilder-black-outline-vector-illustration_677428-1174.jpg"
-          />
+
+
+<div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
+  {/* Modern Gym Showcase Section */}
+  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    {/* Hero Image */}
+    <div className="lg:col-span-2 rounded-xl overflow-hidden shadow-2xl">
+      <img 
+        className="w-full h-96 object-cover transition-transform hover:scale-105"
+        src="https://images.pexels.com/photos/841130/pexels-photo-841130.jpeg" 
+        alt="Modern gym interior"
+        loading="eager"
+      />
+    </div>
+
+    {/* Featured Classes */}
+    <div className="space-y-6">
+      <div className="rounded-xl overflow-hidden shadow-lg h-60">
+        <img 
+          className="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/2261477/pexels-photo-2261477.jpeg" 
+          alt="Crossfit class"
+        />
+      </div>
+      <div className="rounded-xl overflow-hidden shadow-lg h-60">
+        <img 
+          className="w-full h-full object-cover"
+          src="https://images.pexels.com/photos/6550826/pexels-photo-6550826.jpeg" 
+          alt="Personal training"
+        />
+      </div>
+    </div>
+  </div>
+
+  {/* Equipment Gallery */}
+  <h2 className="text-3xl font-bold mt-16 mb-8 text-center">Premium Equipment</h2>
+  <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
+    {[
+      "https://images.pexels.com/photos/1954524/pexels-photo-1954524.jpeg",
+      "https://images.pexels.com/photos/416747/pexels-photo-416747.jpeg",
+      "https://images.pexels.com/photos/949129/pexels-photo-949129.jpeg",
+      "https://images.pexels.com/photos/3253501/pexels-photo-3253501.jpeg",
+      "https://images.pexels.com/photos/221247/pexels-photo-221247.jpeg",
+      "https://images.pexels.com/photos/17840/pexels-photo.jpg",
+      "https://images.pexels.com/photos/3912473/pexels-photo-3912473.jpeg",
+      "https://images.pexels.com/photos/1229356/pexels-photo-1229356.jpeg"
+    ].map((src, index) => (
+      <div key={index} className="rounded-lg overflow-hidden shadow-md hover:shadow-xl transition-shadow">
+        <img 
+          className="w-full h-48 sm:h-56 object-cover"
+          src={src} 
+          alt={`Gym equipment ${index+1}`}
+          loading="lazy"
+        />
+      </div>
+    ))}
+  </div>
+
+  {/* Training Programs */}
+  <h2 className="text-3xl font-bold mt-16 mb-8 text-center">Training Programs</h2>
+  <div className="grid grid-cols-1 sm:grid-cols-3 gap-8">
+    {[
+      {
+        img: "https://images.unsplash.com/photo-1571019613454-1cb2f99b2d8b",
+        title: "Strength Training"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1571019614242-c5c5a73be60b",
+        title: "Cardio Programs"
+      },
+      {
+        img: "https://images.unsplash.com/photo-1541534741688-6078c6bfb5c5",
+        title: "Combat Fitness"
+      }
+    ].map((program, index) => (
+      <div key={index} className="relative group rounded-xl overflow-hidden h-64">
+        <img 
+          className="w-full h-full object-cover brightness-90 group-hover:brightness-100 transition-all"
+          src={program.img} 
+          alt={program.title}
+        />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent flex items-end p-6">
+          <h3 className="text-white text-2xl font-bold">{program.title}</h3>
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
+
+
           <h1>Our gym is dedicated to helping you achieve your fitness goals</h1>
           <p className="text-gray-600 text-center">
             with ease. We provide top-quality equipment, expert trainers, and
             modern facilities to ensure you have everything you need for a
             successful workout. Whether you're aiming to lose weight, build
           </p>
-        </div>
+        
       </aside>
 
       <div className="max-w-4xl mx-auto  rounded-xl  overflow-hidden ">
